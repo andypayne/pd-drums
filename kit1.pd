@@ -13,7 +13,7 @@
 #X obj 1071 204 s \$0-tom3-pre;
 #X floatatom 217 281 5 1 14 1 tom4_preset - -;
 #X obj 1071 225 s \$0-tom4-pre;
-#N canvas 0 23 1423 840 kit_synths 0;
+#N canvas 0 23 1423 840 kit_synths 1;
 #X obj 13 52 kick_synth;
 #X obj 13 28 r \$0-kick;
 #X obj 366 29 - 1;
@@ -50,10 +50,10 @@
 #X obj 460 597 r \$0-cymbal2;
 #X obj 365 877 outlet~;
 #X obj 425 877 outlet~;
-#X obj 368 594 - 1;
-#X obj 368 570 r \$0-cymbal1-pre;
-#X obj 788 594 - 1;
-#X obj 788 570 r \$0-cymbal2-pre;
+#X obj 408 594 - 1;
+#X obj 408 570 r \$0-cymbal1-pre;
+#X obj 858 594 - 1;
+#X obj 858 570 r \$0-cymbal2-pre;
 #X obj 907 621 clap_synth;
 #X obj 907 599 r \$0-clap;
 #X obj 1260 597 - 1;
@@ -87,22 +87,22 @@
 #X connect 31 0 34 0;
 #X connect 32 0 31 0;
 #X connect 33 0 30 0;
-#X connect 36 0 31 6;
+#X connect 36 0 31 7;
 #X connect 37 0 36 0;
-#X connect 38 0 30 6;
+#X connect 38 0 30 7;
 #X connect 39 0 38 0;
 #X connect 40 0 44 0;
 #X connect 41 0 40 0;
-#X connect 42 0 40 4;
+#X connect 42 0 40 5;
 #X connect 43 0 42 0;
 #X restore 83 362 pd kit_synths;
 #X f 167;
 #X floatatom 350 259 5 1 14 1 cymbal2_preset - -;
 #X obj 1071 270 s \$0-cymbal2-pre;
-#X floatatom 350 281 5 1 14 1 clap_preset - -;
+#X floatatom 350 281 5 1 16 1 clap_preset - -;
 #X obj 1071 292 s \$0-clap-pre;
 #X obj 70 120 vsl 15 100 0 1 0 1 \$0-vol-kick empty kick 0 -9 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 3100 1;
 #X obj 101 388 r \$0-vol-kick;
 #X obj 83 413 *~;
 #X obj 228 413 *~;
@@ -132,21 +132,21 @@
 #X obj 1267 388 r \$0-vol-clap;
 #X obj 13 441 outlet~;
 #X obj 120 120 vsl 15 100 0 1 0 1 \$0-vol-snare empty snare 0 -9 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 5400 1;
 #X obj 170 120 vsl 15 100 0 1 0 1 \$0-vol-tom1 empty tom1 0 -9 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 1300 1;
 #X obj 220 120 vsl 15 100 0 1 0 1 \$0-vol-tom2 empty tom2 0 -9 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 3700 1;
 #X obj 270 120 vsl 15 100 0 1 0 1 \$0-vol-tom3 empty tom3 0 -9 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 2300 1;
 #X obj 320 120 vsl 15 100 0 1 0 1 \$0-vol-tom4 empty tom4 0 -9 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 3000 1;
 #X obj 370 120 vsl 15 100 0 1 0 1 \$0-vol-cymbal1 empty cymbal1 0 -9
-0 10 -262144 -1 -1 0 1;
+0 10 -262144 -1 -1 6100 1;
 #X obj 420 120 vsl 15 100 0 1 0 1 \$0-vol-cymbal2 empty cymbal2 0 -9
-0 10 -262144 -1 -1 0 1;
+0 10 -262144 -1 -1 2900 1;
 #X obj 470 120 vsl 15 100 0 1 0 1 \$0-vol-clap empty clap 0 -9 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 4200 1;
 #X obj 69 26 inlet;
 #X obj 69 53 s \$0-kick;
 #X obj 149 26 inlet;
@@ -165,6 +165,8 @@
 #X obj 656 53 s \$0-cymbal2;
 #X obj 756 26 inlet;
 #X obj 756 53 s \$0-clap;
+#X obj 546 93 loadbang;
+#X msg 546 125 1;
 #X connect 0 0 3 0;
 #X connect 1 0 4 0;
 #X connect 2 0 6 0;
@@ -219,4 +221,14 @@
 #X connect 68 0 69 0;
 #X connect 70 0 71 0;
 #X connect 72 0 73 0;
+#X connect 74 0 75 0;
+#X connect 75 0 5 0;
+#X connect 75 0 15 0;
+#X connect 75 0 17 0;
+#X connect 75 0 8 0;
+#X connect 75 0 10 0;
+#X connect 75 0 12 0;
+#X connect 75 0 2 0;
+#X connect 75 0 1 0;
+#X connect 75 0 0 0;
 #X coords 0 -1 1 1 440 220 1 60 85;
