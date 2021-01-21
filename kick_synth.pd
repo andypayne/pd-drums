@@ -1430,6 +1430,7 @@
 #X obj 198 10 inlet;
 #X obj 248 10 inlet;
 #X obj 318 10 inlet;
+#X obj 366 10 inlet;
 #X connect 0 0 15 1;
 #X connect 1 0 15 0;
 #X connect 2 0 15 4;
@@ -1483,4 +1484,5 @@
 #X connect 52 0 8 0;
 #X connect 53 0 6 0;
 #X connect 54 0 10 0;
+#X connect 55 0 11 0;
 #X coords 0 -1 1 1 360 220 1 40 40;

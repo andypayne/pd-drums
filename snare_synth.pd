@@ -121,16 +121,16 @@ of 50 Hz;
 #X floatatom 117 192 7 0 0 0 - - -;
 #X floatatom 184 192 7 0 0 0 - - -;
 #X obj 48 82 vsl 15 100 0.1 4000 1 1 empty \$0-decay decay 0 -9 0 10
--262144 -1 -1 7101 1;
+-262144 -1 -1 8605 1;
 #X obj 247 82 vsl 15 100 0 20000 0 1 empty \$0-reso reso 0 -9 0 10
--262144 -1 -1 4950 1;
+-262144 -1 -1 5940 1;
 #X obj 117 82 vsl 15 100 20 20000 1 1 empty \$0-hipf hipf 0 -9 0 10
 -262144 -1 -1 5607 1;
 #X obj 184 82 vsl 15 100 0 20 0 1 empty \$0-res_mul res_mul 0 -9 0
-10 -262144 -1 -1 2475 1;
+10 -262144 -1 -1 4950 1;
 #X floatatom 316 192 7 0 0 0 - - -;
 #X obj 316 82 vsl 15 100 100 12000 1 1 empty \$0-fm_ctr_freq fm_ctr_freq
-0 -9 0 10 -262144 -1 -1 838 1;
+0 -9 0 10 -262144 -1 -1 0 1;
 #X floatatom 390 192 7 0 0 0 - - -;
 #X obj 390 82 vsl 15 100 20 400 1 1 empty \$0-fm_mod_freq fm_mod_freq
 0 -9 0 10 -262144 -1 -1 7609 1;
@@ -138,7 +138,7 @@ of 50 Hz;
 #X obj 463 82 vsl 15 100 20 400 1 1 empty \$0-fm_depth fm_depth 0 -9
 0 10 -262144 -1 -1 1340 1;
 #X obj 47 234 hradio 20 1 1 14 empty empty presets 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 8;
 #X obj 1 10 inlet;
 #X obj 39 334 outlet~;
 #X obj 322 311 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14;
@@ -1577,6 +1577,7 @@ of 50 Hz;
 #X obj 316 10 inlet;
 #X obj 390 10 inlet;
 #X obj 463 10 inlet;
+#X obj 513 10 inlet;
 #X connect 0 0 3 1;
 #X connect 1 0 3 0;
 #X connect 2 0 3 4;
@@ -1630,4 +1631,5 @@ of 50 Hz;
 #X connect 52 0 11 0;
 #X connect 53 0 13 0;
 #X connect 54 0 15 0;
+#X connect 55 0 16 0;
 #X coords 0 -1 1 1 480 220 1 40 40;
