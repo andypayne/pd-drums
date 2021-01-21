@@ -35,6 +35,8 @@
 #X obj 572 168 s \$0-clap;
 #X obj 405 130 del 1100;
 #X obj 405 168 s \$0-tom2;
+#X obj 602 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 17 0;
 #X connect 0 0 20 0;
 #X connect 1 0 17 1;
@@ -71,3 +73,4 @@
 #X connect 28 0 21 8;
 #X connect 31 0 32 0;
 #X connect 33 0 34 0;
+#X connect 35 0 32 0;
